@@ -76,6 +76,20 @@ software:
     ###########################################################
     # iOS apps
     ###########################################################
+    # Cloudflare WARP (Cloudflare One Agent): installed automatically
+    # with our managed configuration; not offered in self-service.
+    - app_store_id: "6443476492"
+      platform: ios
+      self_service: false
+      setup_experience: true
+      configuration:
+        path: ../platforms/ios/managed-app-configurations/cloudflare-one-agent.xml
+    - app_store_id: "6443476492"
+      platform: ipados
+      self_service: false
+      setup_experience: true
+      configuration:
+        path: ../platforms/ios/managed-app-configurations/cloudflare-one-agent.xml
     # …
     # - app_store_id: "618783545" # Slack
     #   display_name: "Slack"
