@@ -1,0 +1,19 @@
+- name: macOS - DNS resolves through Cloudflare (1.1.1.1)
+  query: |
+    SELECT 1 WHERE
+      EXISTS (SELECT 1 FROM dns_resolvers WHERE type = 'nameserver' AND address = '1.1.1.1')
+      AND NOT EXISTS (
+        SELECT 1 FROM dns_resolvers
+        WHERE type = 'nameserver'
+          AND address NOT IN ('1.1.1.1', '1.0.0.1', '2606:4700:4700::1111', '2606:4700:4700::1001')
+      );
+  critical: false
+  description: This Mac is resolving DNS through a server other than Cloudflare (1.1.1.1). Company Macs must use Cloudflare DNS.
+  resolution: |
+    Fleet fixes this automatically by running a script that sets every network connection's DNS servers to 1.1.1.1 and 1.0.0.1.
+
+    To fix it by hand: System Settings > Network > (your connection) > Details > DNS, remove the existing servers, and add 1.1.1.1 and 1.0.0.1.
+  platform: darwin
+  run_script:
+    path: ../scripts/set-cloudflare-dns.sh
+  webhooks_and_tickets_enabled: true # notify the failing-policies webhook (see fleets/workstations.yml settings)
