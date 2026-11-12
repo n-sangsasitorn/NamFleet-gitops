@@ -68,6 +68,10 @@ controls:
   apple_settings:
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
+      # Defer major macOS updates (e.g. macOS 27 Golden Gate) 90 days for everyone except beta testers
+      - path: ../platforms/macos/declaration-profiles/scoped/defer-major-macos-updates.json
+        labels_exclude_any:
+          - "macOS beta testers"
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
       # Disable Bluetooth Sharing on Engineering Macs (IdP department = Engineering)
       - path: ../platforms/macos/configuration-profiles/engineering/disable-bluetooth-sharing.mobileconfig

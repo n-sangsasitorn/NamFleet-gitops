@@ -1,0 +1,9 @@
+{
+  "Type": "com.apple.configuration.softwareupdate.settings",
+  "Identifier": "com.fleetdm.defer-major-macos-updates",
+  "Payload": {
+    "Deferrals": {
+      "MajorPeriodInDays": 90
+    }
+  }
+}
