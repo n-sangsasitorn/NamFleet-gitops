@@ -9,3 +9,9 @@
   description: Hosts with more than 30 days of uptime since their last reboot (macOS, Windows, Linux, ChromeOS)
   query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
   label_membership_type: dynamic
+
+- name: macOS beta testers
+  description: Macs currently running a macOS beta build (Apple beta builds end in a lowercase letter, e.g. 27C5048a)
+  query: SELECT 1 FROM os_version WHERE build GLOB '[0-9][0-9][A-Z][0-9][0-9][0-9][0-9][a-z]';
+  label_membership_type: dynamic
+  platform: darwin
