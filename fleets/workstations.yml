@@ -15,6 +15,26 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 name: "💻 Workstations"
+
+settings:
+  webhook_settings:
+    ###########################################################
+    # Failing policies webhook
+    #
+    # When a host starts failing a policy in this fleet, Fleet
+    # POSTs the policy and the failing hosts to destination_url.
+    #
+    # Which policies trigger it: any policy in this fleet with
+    # `webhooks_and_tickets_enabled: true` in its .yml file.
+    # (GitOps fills in policy_ids automatically from those.)
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#failing-policies-webhook
+    ###########################################################
+    failing_policies_webhook:
+      enable_failing_policies_webhook: true
+      destination_url: https://webhook.site/c4519653-8e62-4190-8c6a-aace5e281131
+      host_batch_size: 0
 controls:
   setup_experience:
     ###########################################################
