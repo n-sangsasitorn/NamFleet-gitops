@@ -33,6 +33,16 @@ org_settings:
     ###########################################################
     server_url: $FLEET_URL
 
+  fleet_desktop:
+    ###########################################################
+    # Where end users go when they click "About Fleet" in the
+    # Fleet Desktop menu bar / tray icon. (Fleet Premium)
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#fleet-desktop
+    ###########################################################
+    transparency_url: https://github.com/n-sangsasitorn/NamFleet-gitops
+
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
   #
