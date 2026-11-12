@@ -4,3 +4,8 @@
   criteria:
     vital: end_user_idp_department
     value: Engineering
+
+- name: Not rebooted in 30+ days
+  description: Hosts with more than 30 days of uptime since their last reboot (macOS, Windows, Linux, ChromeOS)
+  query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
+  label_membership_type: dynamic
