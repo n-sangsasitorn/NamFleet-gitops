@@ -46,6 +46,16 @@ org_settings:
       enable_activities_webhook: true
       destination_url: https://webhook.site/c4519653-8e62-4190-8c6a-aace5e281131
 
+  fleet_desktop:
+    ###########################################################
+    # Where end users go when they click "About Fleet" in the
+    # Fleet Desktop menu bar / tray icon. (Fleet Premium)
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#fleet-desktop
+    ###########################################################
+    transparency_url: https://github.com/n-sangsasitorn/NamFleet-gitops
+
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
   #
