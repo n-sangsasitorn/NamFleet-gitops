@@ -190,6 +190,13 @@ policies:
 software:
   fleet_maintained_apps:
     # macOS apps
+    - slug: zoom/darwin # Zoom for macOS
+      self_service: true # Fleet Desktop > Self-service
+      setup_experience: true # install on brand-new Macs during setup
+      categories:
+        - "👬 Communication"
+      post_install_script: # configure Zoom our way right after it installs
+        path: ../platforms/macos/software/zoom-post-install.sh
     # …
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
