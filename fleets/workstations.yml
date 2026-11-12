@@ -69,6 +69,10 @@ controls:
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
+      # Disable Bluetooth Sharing on Engineering Macs (IdP department = Engineering)
+      - path: ../platforms/macos/configuration-profiles/engineering/disable-bluetooth-sharing.mobileconfig
+        labels_include_any:
+          - "Engineering department"
   windows_settings:
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
