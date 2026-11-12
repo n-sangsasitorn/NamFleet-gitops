@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Bluetooth Sharing</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fleetdm.engineering.bluetooth-sharing.A89D3C37-0AA6-4DCD-842D-3B2C2BB4B47A</string>
+			<key>PayloadType</key>
+			<string>com.apple.Bluetooth</string>
+			<key>PayloadUUID</key>
+			<string>A89D3C37-0AA6-4DCD-842D-3B2C2BB4B47A</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PrefKeyServicesEnabled</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Turns off Bluetooth file sharing on Macs used by the Engineering department.</string>
+	<key>PayloadDisplayName</key>
+	<string>Disable Bluetooth Sharing</string>
+	<key>PayloadIdentifier</key>
+	<string>com.fleetdm.engineering.bluetooth-sharing</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>920CDE13-6CA2-4FFE-BF7E-FBF81E8A1CAB</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
